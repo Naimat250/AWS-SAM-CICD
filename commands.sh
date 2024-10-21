@@ -11,9 +11,9 @@ aws cloudformation deploy --template-file gen\template-generate.yaml --stack-nam
 sam init --location gh:aws-samples/cookiecutter-aws-sam-pipeline
 
 #GitHub repo Configurations
-aws ssm put-parameter --name "/service/aws-sam-pipeline/github/repo" --description "Github Repository name for Cloudformation Stack aws-sam-pipeline-pipeline"  --type "String" --value "AWS-Serverless-CICD-SAM" --overwrite
-aws ssm put-parameter  --name "/service/aws-sam-pipeline/github/token" --description "Github Token for Cloudformation Stack aws-sam-pipeline-pipeline" --type "String" --value "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" --overwrite
-aws ssm put-parameter  --name "/service/aws-sam-pipeline/github/token" --description "Github Token for Cloudformation Stack aws-sam-pipeline-pipeline" --type "String" --value "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" --overwrite
+aws ssm put-parameter --name "/service/sam-cicd/github/repo" --description "Github Repository name for Cloudformation Stack aws-sam-pipeline-pipeline" --type "String" --value "AWS-Serverless-CICD-SAM" --overwrite
+aws ssm put-parameter --name "/service/sam-cicd/github/token" --description "Github Token for Cloudformation Stack aws-sam-pipeline-pipeline" --type "String" --value "" --overwrite
+aws ssm put-parameter --name "/service/sam-cicd/github/user" --description "Github Username for Cloudformation Stack aws-sam-pipeline-pipeline" --type "String" --value "Naimat250" --overwrite
 
 #Cloudformation Stack
 aws cloudformation create-stack --stack-name aws-sam-pipeline-pipeline --template-body file://pipeline.yaml --capabilities CAPABILITY_NAMED_IAM

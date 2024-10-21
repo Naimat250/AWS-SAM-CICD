@@ -7,7 +7,7 @@ Resources:
     Properties:
       Handler: app.lambda_handler
       Runtime: python3.9
-      CodeUri: s3://naimat-sam-code/96b3446c7356498a2f04e650bfe3b653
+      CodeUri: s3://naimat-sam-code/508e5fedc3d97d9e628e72822a8a3b25
       Description: A starter AWS Lambda function.
       MemorySize: 128
       Timeout: 3
