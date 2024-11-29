@@ -4,3 +4,5 @@ phases:
     commands:
       - sam build
       - sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+
+      #testing rule from dev 
