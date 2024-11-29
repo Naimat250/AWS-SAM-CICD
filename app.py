@@ -5,7 +5,7 @@ import os
 
 print('Loading function')
 
-#testing rule from dev again
+#testing rule from dev againn
 
 def respond(err, res=None):
     return {
